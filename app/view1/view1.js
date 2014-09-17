@@ -72,7 +72,7 @@ $scope.akanName=function(){
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
-    console.log(gender);
+
     // The response object is returned with a status field that lets the
     // app know the current login status of the person.
     // Full docs on the response object can be found in the documentation
@@ -127,6 +127,7 @@ FB.getLoginStatus(function(response) {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
+      //console.log(response.gender);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });   
