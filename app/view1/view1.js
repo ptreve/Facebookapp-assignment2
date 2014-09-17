@@ -1,3 +1,6 @@
+//Phyllis Treve
+//Edwina Reynolds Baiden
+
 'use strict';
 
 angular.module('myApp.view1', ['ngRoute'])
@@ -14,6 +17,7 @@ angular.module('myApp.view1', ['ngRoute'])
 	$scope.dob="";
 
 $scope.akanName=function(){
+  var me ="";
 	var mockscope = $scope;
 	if(mockscope.gender=="male" && mockscope.dob=="Monday"){
 		return "Kojo";
@@ -127,9 +131,11 @@ FB.getLoginStatus(function(response) {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      //console.log(response.gender);
+      console.log(response.gender);
+      console.log(response.birthday);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Thanks for logging in, ' + response.name + ', ' + response.gender + '. ' + 'Your birthday is ' + response.birthday + '!';
+
     });   
 
   }
