@@ -1,1 +1,29 @@
 <p>This is the partial for view 1.</p>
+
+<!DOCTYPE html>
+<html ng-app>
+	<body>
+		<div ng-model="ViewCtrl" class="container">
+			<center><p>Please insert your details:</p></center> 
+			<center>Firstname:<input type="text" ng-model="firstname"></center><br>
+			<center>Lastname:<input type="text" ng-model="lastname"></center><br>
+			<center>Gender:<input type="text" ng-model="gender"></center>
+			<center>(Please enter "male" or "female" only)</center><br>
+			<center>day of birth:<input type="text" ng-model="dob"></center><br>
+			<center>Your Akan name is {{akanName()}}</center>
+			<!-- <center><button ng-click={{akanName}}>Submit  
+</button></center> -->
+
+		</div>	
+	</body>
+</html>
+<!-- <body>
+<html>
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+ </fb:login-button>
+
+ <div id="status">
+ </div>
+
+ </body>
+</html> -->
